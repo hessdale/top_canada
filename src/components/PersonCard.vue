@@ -1,27 +1,22 @@
 <template>
     <div class="person-card">
-        <div class="photo">
-            <!-- <img :src="person.photo" alt="photo" /> -->
-            <img src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="">
-        </div>
-        <div class="info">
-            <!-- <h2>{{ person.name }}</h2> -->
-            <!-- <p class="info-blurb">{{ person.info }}</p> -->
-            <h2>JOHN SMITH</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam obcaecati officiis neque minus itaque
-                culpa, possimus numquam unde, officia fuga nulla doloribus adipisci iure iusto repudiandae dolore!
-                Possimus, est asperiores.</p>
-        </div>
+        <img :src="person.photo" :alt="person.name" class="person-photo" />
+        <h3 class="person-name">{{ person.name }}</h3>
+        <p class="person-networth">Net Worth: {{ person.netWorth }}</p>
+        <p class="person-media">Media Influence: {{ person.mediaInfluence }}</p>
+        <p class="person-controversies">Controversies: {{ person.controversies }}</p>
     </div>
 </template>
 
 <script>
 export default {
     props: {
-        person: Object
-    }
-}
+        person: {
+            type: Object,
+            required: true,
+        },
+    },
+};
 </script>
 
 <style scoped>
