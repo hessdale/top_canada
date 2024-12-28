@@ -33,7 +33,7 @@ export default {
     // Stand-in variable with mock data
     const people = [
       { id: 1, name: "David Thomson & Family", photo: "/user-xmark.svg", netWorth: "$69.6 billion", mediaInfluence: "Owners of Thomson Reuters", controversies: "Family disputes over succession" },
-      { id: 2, name: "Changpeng Zhao", photo: "/user-xmark.svg", netWorth: "$64.15 billion", mediaInfluence: "Crypto industry leader with Binance", controversies: "Regulatory scrutiny globally" },
+      { id: 2, name: "Changpeng Zhao", photo: "https://upload.wikimedia.org/wikipedia/commons/6/63/2022_-_Press_Conferences_BE6_1595_%2852471628042%29.jpg", netWorth: "$64.15 billion", mediaInfluence: "Crypto industry leader with Binance", controversies: "Regulatory scrutiny globally" },
       { id: 3, name: "Joseph Tsai", photo: "/user-xmark.svg", netWorth: "$10.12 billion", mediaInfluence: "Owner of Brooklyn Nets", controversies: "Data privacy concerns with Alibaba" },
       { id: 4, name: "David Cheriton", photo: "/user-xmark.svg", netWorth: "$17.07 billion", mediaInfluence: "Early investor in Google", controversies: "Minimal" },
       { id: 5, name: "Tobi Lütke", photo: "/user-xmark.svg", netWorth: "$9.54 billion", mediaInfluence: "Shopify’s impact on e-commerce", controversies: "Hosting controversial merchants" },

@@ -1,10 +1,12 @@
 <template>
     <div class="person-card">
-        <img :src="person.photo" :alt="person.name" class="person-photo" />
-        <h3 class="person-name">{{ person.name }}</h3>
-        <p class="person-networth">Net Worth: {{ person.netWorth }}</p>
-        <p class="person-media">Media Influence: {{ person.mediaInfluence }}</p>
-        <p class="person-controversies">Controversies: {{ person.controversies }}</p>
+        <img :src="person.photo" :alt="`Photo of ${person.name}`" class="person-photo" />
+        <div class="person-details">
+            <h3 class="person-name">{{ person.name }}</h3>
+            <p class="person-networth"><strong>Net Worth:</strong> {{ person.netWorth }}</p>
+            <p class="person-media"><strong>Media Influence:</strong> {{ person.mediaInfluence }}</p>
+            <p class="person-controversies"><strong>Controversies:</strong> {{ person.controversies }}</p>
+        </div>
     </div>
 </template>
 
@@ -22,24 +24,46 @@ export default {
 <style scoped>
 .person-card {
     display: flex;
-    border: 1px solid black;
-    margin-bottom: 10px;
-    padding: 10px;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.photo img {
-    max-width: 100px;
-    max-height: 100px;
-    margin-right: 20px;
+.person-photo {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ccc;
 }
 
-.info h2 {
+.person-details {
+    flex-grow: 1;
+}
+
+.person-name {
+    font-size: 20px;
     font-weight: bold;
-    text-transform: uppercase;
-    margin: 0;
+    margin: 0 0 8px;
 }
 
-.info-blurb {
-    font-size: 0.9em;
+.person-networth,
+.person-media,
+.person-controversies {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.person-networth strong,
+.person-media strong,
+.person-controversies strong {
+    font-weight: bold;
+    color: #333;
 }
 </style>
